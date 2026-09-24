@@ -1,0 +1,8 @@
+{
+  "idempotency_key": "DECL-DEMO-0001",
+  "ship_id": "SH-04",
+  "direction": "inbound",
+  "duration_minutes": 120,
+  "requested_start": "2026-09-25T00:30:00",
+  "committed": false
+}

@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pilot
+      POSTGRES_PASSWORD: pilot
+      POSTGRES_DB: pilot_schedule
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pilot -d pilot_schedule"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg://pilot:pilot@db:5432/pilot_schedule
+      PLAN_BASE_DATE: "2026-09-24"
+      PLAN_HORIZON_MINUTES: "2880"
+      PILOT_DISEMBARK_MINUTES: "25"
+      PILOT_EMBARK_MINUTES: "20"
+      PILOT_TRANSFER_MINUTES: "10"
+      TIDE_SAMPLE_MINUTES: "10"
+      SOLVER_SEED: "42"
+      SOLVER_TIME_LIMIT_SECONDS: "15"
+    ports:
+      - "8000:8000"
+
+volumes:
+  pgdata:
