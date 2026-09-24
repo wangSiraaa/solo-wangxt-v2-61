@@ -1,0 +1,23 @@
+{
+  "note": "同一潮窗两条船：合格人员与接送艇都够，求解器按离船+转场时间排序（虚构数据）",
+  "tasks": [
+    {
+      "task_ref": "DECL-PAC-002",
+      "ship_id": "PACIFIC",
+      "location": "ANCH",
+      "duration_minutes": 60,
+      "earliest_start": "2026-09-24T21:00:00Z",
+      "latest_start": "2026-09-25T00:30:00Z",
+      "committed": true
+    },
+    {
+      "task_ref": "DECL-RIV-002",
+      "ship_id": "RIVERHAWK",
+      "location": "INB",
+      "duration_minutes": 50,
+      "earliest_start": "2026-09-24T21:00:00Z",
+      "latest_start": "2026-09-25T01:00:00Z",
+      "committed": true
+    }
+  ]
+}

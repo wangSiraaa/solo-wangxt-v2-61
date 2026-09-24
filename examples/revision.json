@@ -1,0 +1,12 @@
+{
+  "kind": "reschedule",
+  "task_ref": "DECL-PAC-001",
+  "task": {
+    "ship_id": "PACIFIC",
+    "location": "ANCH",
+    "duration_minutes": 60,
+    "earliest_start": "2026-09-25T09:00:00Z",
+    "latest_start": "2026-09-25T13:00:00Z",
+    "committed": true
+  }
+}

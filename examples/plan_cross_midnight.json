@@ -1,0 +1,14 @@
+{
+  "note": "跨午夜潮窗：吃水 4.0m 散货船期望 20:00 起，实际只有 23:30 前后潮窗满足（虚构数据）",
+  "tasks": [
+    {
+      "task_ref": "DECL-PAC-001",
+      "ship_id": "PACIFIC",
+      "location": "ANCH",
+      "duration_minutes": 120,
+      "earliest_start": "2026-09-24T20:00:00Z",
+      "latest_start": "2026-09-25T00:30:00Z",
+      "committed": true
+    }
+  ]
+}
